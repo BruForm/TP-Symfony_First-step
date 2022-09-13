@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        {#        {% dump(app.request) %} #}
+        <div class="nav-part nav-left">
+            <a href="{{ path('app_home') }}" class="{{ app.request.get('_route') == 'app_home' ? 'active' : '' }}">PHP
+                Bases</a>
+        </div>
+        <div class=" nav-part nav-right">
+            <a href="{{ path('app_about') }}" class="{{ app.request.get('_route') == 'app_about' ? 'active' : '' }}">Page
+                about</a>
+            <a href="" class="">Pannier (0)</a>
+        </div>
+    </nav>
+</header>
