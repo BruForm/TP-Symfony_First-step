@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Brand details{% endblock %}
+
+{% block main_class %}brand-main{% endblock %}
+
+{% block main %}
+    <h1>
+        {{ brand.name }}
+    </h1>
+
+    <div class="page-content">
+        <div class="brand-img"></div>
+        <div class="brand-details">
+            <label>Headquarter's address :</label><br>
+            <div class="address">
+                {% set test = brand.address | split("\n") %}
+                {{ test[0] }} <br>
+                {{ test[1] }} <br>
+                {{ test[2] }}
+            </div>
+            <br>
+            <label>Created at :</label><br>
+            <div class="address">
+                {{ brand.createdAt | date("Y/m/d") }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

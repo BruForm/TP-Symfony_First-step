@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Brand List{% endblock %}
+
+{% block main_class %}brands-main{% endblock %}
+
+{% block main %}
+
+    <div class="page-content brands">
+        {% for brand in brands %}
+            <div class="brand-card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2 class="brand-title">{{ brand.name }}</h2>
+                    <div class="brand-details">
+                        <div class="brand-createdAt">Created at : {{ brand.createdAt | date("Y/m/d") }}</div>
+                        <a href="{{ path('app_brand_details', {'id' : brand.id}) }}">Plus de détails</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

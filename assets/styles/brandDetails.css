@@ -1,0 +1,26 @@
+main.brand-main .page-content {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+    gap: 3rem;
+}
+
+main.brand-main .page-content .brand-img {
+    background-color: var(--secondary-color);
+}
+
+main.brand-main .page-content .brand-details {
+    grid-column: span 2;
+    background-color: var(--quaternary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+main.brand-main .page-content .brand-details .address {
+    font-size: 1rem;
+}
+main.brand-main .page-content .brand-details label{
+    text-decoration: underline;
+}

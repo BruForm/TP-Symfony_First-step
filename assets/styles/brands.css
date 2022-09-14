@@ -1,0 +1,86 @@
+main.brands-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.brands-main .page-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main.brands-main .page-content-header h1 {
+    margin: 0;
+}
+
+main.brands-main .brands {
+    display: grid;
+    margin: 1rem 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+main.brands-main .brands .brand-card {
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+main.brands-main .brands .brand-card .card-img {
+    background-color: var(--secondary-color);
+    height: 70%;
+}
+
+main.brands-main .brands .brand-card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+}
+
+main.brands-main .brands .brand-card .card-content .brand-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main.brands-main .brands .brand-card .card-content .brand-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+main.brands-main .brands .brand-card .card-content .brand-details a {
+    color: var(--light-color);
+}
+
+main.brands-main .brands .brand-card .card-content .brand-createdAt {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+main.brands-main .brands .brand-card .card-content .brand-createdAt .currency {
+    font-size: 1.5rem;
+}
+
+main.brands-main .pagination {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main.brands-main .pagination .pagination-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+main.brands-main .pagination .pagination-link.active,
+main.brands-main .pagination .pagination-link:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}

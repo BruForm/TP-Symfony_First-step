@@ -1,12 +1,32 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Product details{% endblock %}
+{% block title %}Product details : {{ product.name }} {% endblock %}
 
 
-{% block main_class %}index-main{% endblock %}
+{% block main_class %}details-main{% endblock %}
 
 
 {% block main %}
+    <div class="page-content-header">
+        <h1>
+            Détails {{ product.name }}
+        </h1>
+    </div>
 
+    <div class="page-content">
+        <div class="product-img"></div>
+        <div class="product-details">
+            <div class="description">
+                {{ product.description }}
+            </div>
+            <div class="bottom-details">
+                <div class="price">{{ product.price | round(2, 'floor') | number_format(2) }}<span class="currency">€</span></div>
+                <form method="post" class="add-to-cart-form">
+                    <input type="number" name="quantity" placeholder="Quantité..">
+                    <input type="submit" value="Ajouter au panier">
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

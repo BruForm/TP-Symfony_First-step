@@ -12,6 +12,8 @@ import './styles/cart.css';
 import './styles/login.css';
 import './styles/index.css';
 import './styles/details.css';
+import './styles/brands.css';
+import './styles/brandDetails.css';
 
 // start the Stimulus application
 import './bootstrap';
