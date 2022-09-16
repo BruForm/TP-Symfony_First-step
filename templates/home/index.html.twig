@@ -8,12 +8,15 @@
     <div class="page-content products">
         {% for product in products %}
             <div class="product-card">
-                <div class="card-img"></div>
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/400x100.png/005544/010101?text=Image+produit">
+                </div>
                 <div class="card-content">
                     <h2 class="product-title">{{ product.name }}</h2>
                     <div class="product-details">
                         <a href="{{ path('app_product_details', {'id' : product.id}) }}">Plus de détails</a>
-                        <div class="product-price">{{ product.price | round(2, 'floor') | number_format(2) }}<span class="currency">€</span></div>
+                        <div class="product-price">{{ product.price | round(2, 'floor') | number_format(2) }}<span
+                                    class="currency">€</span></div>
                     </div>
                 </div>
             </div>

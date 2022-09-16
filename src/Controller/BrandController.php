@@ -19,7 +19,7 @@ class BrandController extends AbstractController
         ]);
     }
 
-    #[Route('/brand/{id}/details', name: 'app_brand_details')]
+    #[Route('/brand:{id}/details', name: 'app_brand_details')]
     public function displayBrandDetails(Brand $brand): Response
     {
         return $this->render('brand/brandDetails.html.twig', [
